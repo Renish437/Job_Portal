@@ -20,7 +20,8 @@ Route::post('/apply-job',[JobsController::class,'applyJob'])->name('apply-job');
 Route::post('/saves-job',[JobsController::class,'savesJob'])->name('saves-job');
 Route::get('/forgot-password',[AccountController::class,'forgot_password'])->name('account.forgot-password');
 Route::post('/store-forgot-password',[AccountController::class,'store_forgot_password'])->name('account.forgot-password-store');
-
+Route::get('/reset-password/{token}',[AccountController::class,'reset_password'])->name('account.reset-password');
+Route::post('/reset-password',[AccountController::class,'reset_password_store'])->name('account.reset-password-store');
 
 
 Route::group(['prefix' => 'admin'], function () {

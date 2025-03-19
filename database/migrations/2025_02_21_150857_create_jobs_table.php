@@ -30,7 +30,7 @@ return new class extends Migration
             $table->string('company_website')->nullable();
             $table->integer('status')->default(1);
             $table->integer('is_featured')->default(1);
-            $table->foreignId('user_id')->constrained()->onDelete('cascade')->after('job_type_id');
+           
             $table->timestamps();
         });
     }
